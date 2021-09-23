@@ -31,12 +31,12 @@ public class Testing : MonoBehaviour
 
         if (transform.position.y > yRange)
         {
-            transform.position = new Vector2(xRange, transform.position.y);
+            transform.position = new Vector2(transform.position.x, yRange);
         }
 
-        if (transform.position.x < -xRange)
+        if (transform.position.y < -yRange)
         {
-            transform.position = new Vector2(-xRange, transform.position.y);
+            transform.position = new Vector2(transform.position.x, -yRange);
         }
 
         float moveHorizontal = Input.GetAxis("Horizontal");
