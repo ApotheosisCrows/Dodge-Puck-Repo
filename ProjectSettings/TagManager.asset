@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Puck 1
   - Pickup
+  - Wall
+  - Puck
   layers:
   - Default
   - TransparentFX

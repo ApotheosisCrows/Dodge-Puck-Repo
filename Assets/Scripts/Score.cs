@@ -6,12 +6,17 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     private TextMeshProUGUI scoreText;
-    public int scoreValue; 
+    private TextMeshProUGUI highScoreText;
+    public int scoreValue;
+    private int highScore;
 
     // Start is called before the first frame update
     void Start()
     {
         scoreText = GetComponent<TextMeshProUGUI>();
+        
+        highScoreText = GameObject.Find("HighScore").GetComponent<TextMeshProUGUI>();
+        highScore = 0;
     }
 
     // Update is called once per frame
@@ -22,7 +27,13 @@ public class Score : MonoBehaviour
 
     public void UpdateScore()
     {
-        scoreValue += 5;
-        scoreText.text = scoreValue.ToString();
+        //scoreValue += 5;
+        scoreText.text = "Score:" + scoreValue.ToString();
+        if(scoreValue > highScore)
+        {
+          
+            highScore = scoreValue;
+            highScoreText.text = "High Score:" + highScore.ToString();
+        }
     }
 }

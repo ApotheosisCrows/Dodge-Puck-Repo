@@ -11,7 +11,7 @@ public class PuckController : MonoBehaviour
     void Start()
     {
         moveDirection = direction[Random.Range(0, 4)];
-        Debug.Log("moveDirection = " + moveDirection);
+        
     }
 
     // Update is called once per frame
@@ -42,7 +42,6 @@ public class PuckController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            Debug.Log("WALLLLLLLLLLLLL");
             puckSpeed = -puckSpeed;
         }
      
